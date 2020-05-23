@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "0d121895-7829-49cd-9c9d-11053f9e2140",
+		"name": "apitestsl13",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9999/api/v1/contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb6c3d3c-f727-4ba3-838d-e186261bfbd4",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"API working\"] = jsonData.length === 7;",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9999/api/v1/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
